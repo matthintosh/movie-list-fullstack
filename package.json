@@ -1,0 +1,15 @@
+{
+  "name": "movie-list-fullstack",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {},
+  "workspaces":[
+    "./back",
+    "./front"
+  ],
+  "scripts": {
+    "dev": "turbo dev"
+  },
+  "author": "Matthieu Rocher",
+  "license": "MIT"
+}

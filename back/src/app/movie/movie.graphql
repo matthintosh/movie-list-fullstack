@@ -1,0 +1,47 @@
+type Movie {
+  id: ID!
+  title: String!
+  original_title: String
+  poster_path: String!
+  overview: String!
+  backdrop_path: String!
+  release_date: String
+  credits: Credits
+  images: Image
+}
+
+type Credits {
+  cast: [Cast]
+  crew: [Crew]
+}
+
+type Image {
+  backdrops: [Media]
+  logos: [Media]
+  posters: [Media]
+}
+
+type Media {
+  file_path: String
+  iso_639_1: String
+}
+
+type Cast {
+  id: ID
+  name: String
+  profile_path: String
+  character: String
+  order: Int
+}
+
+type Crew {
+  id: ID
+  profile_path: String
+  name: String
+  job: String
+}
+
+type Query {
+  movies: [Movie]
+  movie(id: ID!): Movie
+}
